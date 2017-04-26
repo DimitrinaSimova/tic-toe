@@ -1,0 +1,233 @@
+// ==========================================================================
+// Home page
+// ==========================================================================
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (max-width: @medium) {
+        max-width: 400px;
+    }
+
+    @media screen and (max-width: @small) {
+        width: 300px;
+    }
+}
+
+.board-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: @medium) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @media screen and (max-width: @small) {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.board-9 {
+    width: 33%;
+    height: 33%;
+
+    float: left;
+    display: inline-block;
+
+    padding: 2%;
+    border: 2px solid @gray;
+
+    .x-icon,
+    .o-icon {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            .translate(-50%, -50%);
+
+            font-size: 30px;
+            font-size: 2vw;
+
+            @media screen and (max-width: @medium) {
+                font-size: 14px;
+                font-size: 4vw;
+            }
+        }
+    }
+}
+
+.board-3 {
+    width: 100%;
+    height: 100%;
+
+    padding: 10%;
+    border: 2px solid @gray;
+
+    .x-icon,
+    .o-icon {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            .translate(-50%, -50%);
+
+            font-size: 140px;
+            font-size: 9vw;
+
+            @media screen and (max-width: @medium) {
+                font-size: 110px;
+                font-size: 14vw;
+            }
+
+            @media screen and (max-width: @small) {
+                font-size: 40px;
+                font-size: 14vw;
+            }
+        }
+    }
+}
+
+.tile {
+    float: left;
+    width: 33.33%;
+    height: 33.33%;
+    text-align: center;
+
+    border: 1px solid @black;
+}
+
+.border-top {
+    border-top: none;
+}
+
+.border-bottom {
+    border-bottom: none;
+}
+
+.border-left {
+    border-left: none;
+}
+
+.border-right {
+    border-right: none;
+}
+
+.x-icon,
+.o-icon {
+    &:before {
+        content: '';
+        font-size: 16px;
+        color: @orange;
+    }
+}
+
+.x-icon {
+    &:before {
+        content: 'X';
+    }
+}
+
+.o-icon {
+    &:before {
+        content: 'O';
+    }
+}
+
+.msg {
+    display: none;
+    padding-top: 30px;
+
+    color: @orange;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+.main-btn {
+    min-width: 35%;
+    display: inline-block;
+    position: relative;
+    margin: 5% auto;
+    padding: 5px;
+
+    text-align: center;
+    border: 2px solid @gray;
+
+    background-color: transparent;
+    .transition(all 0.3s ease-in-out);
+
+    span {
+        display: inline-block;
+    }
+
+    .x-icon,
+    .o-icon {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+
+        padding: 5px 10px;
+        line-height: 1.5;
+        background-color: @orange;
+
+        &:before {
+            color: @white;
+        }
+    }
+
+    &:hover {
+        color: @white;
+        font-weight: bold;
+        background-color: @orange;
+    }
+
+    @media screen and (max-width: @medium) {
+        min-width: 45%;
+    }
+}
+
+.main-btn-text {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.x-tyrn {
+    float: left;
+}
+
+.o-turn {
+    float: right;
+}
+
+.x-tyrn,
+.o-turn {
+    &.active {
+        color: @white;
+        background-color: @orange;
+    }
+}
+
+.reset-game {
+    display: none;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.active {
+    display: inline-block;
+}

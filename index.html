@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Tik toe</title>
+    <meta name="description" content="Tik toe">
+    <meta name="keywords" content="Tik toe, game">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- VENDORS -->
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <div class="clearfix">
+            <a href="javascript:;" class="main-btn x-tyrn active" title="Your turn">
+                <span class="x-icon"></span>
+                <span class="main-btn-text">Turn</span>
+            </a>
+            <a href="javascript:;" class="main-btn o-turn" title="My turn">
+                <span class="o-icon"></span>
+                <span class="main-btn-text">Turn</span>
+            </a>
+        </div>
+
+        <div class="board-wrapper">
+            <div class="board-3 clearfix">
+                <div class="tile border-top border-left x-icon"></div>
+                <div class="tile border-top"></div>
+                <div class="tile border-top border-right"></div>
+                <div class="tile border-left"></div>
+                <div class="tile o-icon"></div>
+                <div class="tile border-right"></div>
+                <div class="tile border-bottom border-left"></div>
+                <div class="tile border-bottom"></div>
+                <div class="tile border-bottom border-right x-icon"></div>
+            </div>
+        </div>
+
+        <p class="msg">X won on 3th move!</p>
+
+        <div>
+            <a href="javascript:;" class="main-btn reset-game" title="Reset the game">
+                <span>Reset</span>
+            </a>
+        </div>
+    </section>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
